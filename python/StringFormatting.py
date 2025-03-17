@@ -14,6 +14,6 @@ def print_formatted(number):
     #print(f"{n} {oct(n).lstrip("0o"):>} {hex(n).lstrip("0x"):>} {bin(n).lstrip("0b"):>}")
 
 
-n = int(input())
-print_formatted(n)
 
+print_formatted(6)
+print_formatted(60)
