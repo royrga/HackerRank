@@ -4,21 +4,12 @@ def minion_game(string):
     s_points = 0
     k_words = []
     s_words = []
-    for i in range(len(string)):
-        if string[i].lower() in {'a','e','i','o','u'}:
-            for j in range(i+1,len(string)+1):
-                points = 0
-                points += 1
-                # points += string.count(string[i:j])-1 if string.find(string[i:j]) != -1 else 0
-                k_points += points
-                k_words.append([string[i:j],points])
+    l_string = len(string)
+    for i in range(l_string):
+        if string[i] in 'AEIOU':
+            k_points += len(string[i:])
         else:
-            for j in range(i+1,len(string)+1):
-                points = 0
-                points += 1
-                # points += string.count(string[i:j])-1 if string.count(string[i:j]) > 0 else 0
-                s_points += points
-                s_words.append([string[i:j],points])
+            s_points += len(string[i:])
 
     # print(k_words)
     # print(s_words)
